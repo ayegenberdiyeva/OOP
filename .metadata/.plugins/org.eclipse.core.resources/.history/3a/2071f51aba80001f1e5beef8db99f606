@@ -1,0 +1,29 @@
+package lecture_pr;
+
+public class Staff extends User{
+	double salary;
+	String subjects[];
+	
+	public Staff(double salary, String subjects[]) {
+		this.salary = salary;
+		this.subjects = subjects;
+	}
+	
+	public String getData() {
+		String data = super.getData();
+		StringBuilder iniData = new StringBuilder(data);
+		iniData.append(", ").append(String.valueOf(salary)).append(", ");		
+		for (String i : subjects) {
+			iniData.append(i).append(", ");
+		}
+		return iniData.toString();
+	}
+	
+	public String toString() {
+		return "Staff{" +
+				super.toString() +
+				", salary=" + salary +
+				", subjects=" + subjects +
+				'}';
+	}
+}

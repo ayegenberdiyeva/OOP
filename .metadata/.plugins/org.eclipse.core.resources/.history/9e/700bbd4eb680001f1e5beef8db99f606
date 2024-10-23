@@ -1,0 +1,30 @@
+package lecture_pr;
+
+public class User {
+	protected int id;
+	protected String login;
+	protected String password;
+	protected String name;
+	protected String surname;
+	
+	public User() {
+		id = 0;
+		login = "";
+		password = "";
+		name = "";
+		surname = "";
+	}
+	
+	public User(int id, String login, String password, String name, String surname) {
+		this.id = id;
+		this.login = login;
+		this.password = password;
+		this.name = name;
+		this.surname = surname;
+	}
+	
+	public String getData() {
+		String data = id + ", " + login + ", " + password + ", " + name + ", " + surname;
+		return data;
+	}
+}
